@@ -342,9 +342,6 @@ exec_always --no-startup-id xrandr --output HDMI-0 --rotate inverted --right-of 
 # Window Compositor
 exec_always --no-startup-id picom --config /home/kumail/.config/picom.conf
 
-# Polybar Launch
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-
 # Window Border Size (change the pixel #)
 for_window [class="^.*"] border pixel 0
 
@@ -352,10 +349,14 @@ for_window [class="^.*"] border pixel 0
 gaps inner 5
 gaps outer 2
 
+# Polybar Launch
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+
 # Wallpaper
-exec_always --no-startup-id feh --bg-fill /home/kumail/Pictures/eclipse.jpg
+#exec_always --no-startup-id feh --bg-fill /home/kumail/Pictures/eclipse.jpg
 #exec_always --no-startup-id wpg -s /home/kumail/Pictures/eclipse.jpg
-#exec_always --no-startup-id wal -R
+exec_always --no-startup-id wal -R
+#exec --no-startup-id wal -i "$(< "${HOME}/.cache/wal/wal")"
 
 # Screenshot
 bindsym Print exec --no-startup-id flameshot gui
