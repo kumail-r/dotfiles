@@ -9,6 +9,12 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
 alias i3config='vim ~/.config/i3/config'
+alias unzip='bsdtar xvf'
+alias suspend='systemctl suspend'
+alias hibernate='systemctl hibnernate'
+
+
+
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.

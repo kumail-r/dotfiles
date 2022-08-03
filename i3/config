@@ -353,9 +353,9 @@ gaps inner 5
 gaps outer 2
 
 # Wallpaper
-#exec_always --no-startup-id feh --bg-fill /home/kumail/Pictures/eclipse.jpg
+exec_always --no-startup-id feh --bg-fill /home/kumail/Pictures/eclipse.jpg
 #exec_always --no-startup-id wpg -s /home/kumail/Pictures/eclipse.jpg
-exec_always --no-startup-id wal -R
+#exec_always --no-startup-id wal -R
 
 # Screenshot
 bindsym Print exec --no-startup-id flameshot gui
