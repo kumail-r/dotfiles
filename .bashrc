@@ -6,15 +6,21 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-PS1='[\u@\h \W]\$ '
+PS1='[\u@\h \w]\$ '
 
 alias i3config='vim ~/.config/i3/config'
 alias unzip='bsdtar xvf'
 alias suspend='systemctl suspend'
 alias hibernate='systemctl hibnernate'
+alias ssh='kitty +kitten ssh'
 
-
-
+ranger() {
+	if [ -z "$RANGER_LEVEL" ]; then
+		/usr/bin/ranger "$@"
+	else
+   		exit
+	fi
+}
 
 # Import colorscheme from 'wal' asynchronously
 # &   # Run the process in the background.
@@ -31,11 +37,3 @@ cat ~/.cache/wal/sequences
 # To add support for TTYs this line can be optionally added.
 source ~/.cache/wal/colors-tty.sh
 
-
-ranger() {
-	if [ -z "$RANGER_LEVEL" ]; then
-		/usr/bin/ranger "$@"
-	else
-   		exit
-	fi
-}
